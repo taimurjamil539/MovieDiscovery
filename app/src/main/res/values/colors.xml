@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colors -->
+    <color name="accent_color">#E50914</color>
+    <color name="accent_dark">#B20710</color>
+
+    <!-- Background Colors -->
+    <color name="splash_bg">#0D0D0D</color>
+    <color name="screen_bg">#121212</color>
+    <color name="card_bg">#1E1E1E</color>
+    <color name="card_bg_elevated">#252525</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+
+    <!-- UI Element Colors -->
+    <color name="card_stroke">#2A2A2A</color>
+    <color name="divider_color">#2A2A2A</color>
+    <color name="error_color">#CF6679</color>
+
+    <!-- System Colors -->
+    <color name="colorPrimary">#E50914</color>
+    <color name="colorPrimaryVariant">#B20710</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+</resources>

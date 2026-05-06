@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeColor="@color/card_stroke"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Movie Poster -->
+        <ImageView
+            android:id="@+id/ivMoviePoster"
+            android:layout_width="90dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_poster_placeholder"
+            android:contentDescription="Movie Poster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedCorner8" />
+
+        <!-- Movie Name -->
+        <TextView
+            android:id="@+id/tvMovieName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/screen_bg"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivMoviePoster"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Genres -->
+        <TextView
+            android:id="@+id/tvMovieGenres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:drawablePadding="4dp"
+            android:textColor="@color/accent_color"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivMoviePoster"
+            app:layout_constraintTop_toBottomOf="@id/tvMovieName" />
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/tvMovieRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_rating_badge"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toEndOf="@id/ivMoviePoster"
+            app:layout_constraintTop_toBottomOf="@id/tvMovieGenres" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvMovieStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ivMoviePoster"
+            app:layout_constraintTop_toBottomOf="@id/tvMovieRating" />
+
+        <!-- Language -->
+        <TextView
+            android:id="@+id/tvMovieLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ivMoviePoster"
+            app:layout_constraintTop_toBottomOf="@id/tvMovieStatus" />
+
+        <!-- Delete Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="Delete"
+            android:textSize="11sp"
+            android:textColor="@color/error_color"
+            app:cornerRadius="18dp"
+            app:strokeColor="@color/error_color"
+            app:icon="@drawable/ic_delete"
+            app:iconTint="@color/error_color"
+            app:iconSize="14dp"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toStartOf="@id/btnShare"
+            app:layout_constraintStart_toEndOf="@id/ivMoviePoster"
+            app:layout_constraintTop_toBottomOf="@id/tvMovieLanguage"
+            android:visibility="gone" />
+
+        <!-- Share Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="Share"
+            android:textSize="11sp"
+            app:backgroundTint="@color/accent_color"
+            app:cornerRadius="18dp"
+            app:icon="@drawable/ic_share"
+            app:iconSize="14dp"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnDelete"
+            app:layout_constraintTop_toBottomOf="@id/tvMovieLanguage"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
